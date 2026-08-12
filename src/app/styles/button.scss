@@ -1,0 +1,7 @@
+@use "../styles/mixin.scss";
+
+button {
+  @include mixin.bgAndtext;
+  @include mixin.input;
+  border-radius: 50px;
+}

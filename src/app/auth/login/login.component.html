@@ -1,0 +1,24 @@
+   
+   <body >
+   <div class="right-div" >
+        <div class="inner-right">
+          <h1>Please Login</h1>
+          <div>
+            <form action="submit" (ngSubmit) = "logIn()">            
+              <div>
+                <input type="email" placeholder="Email Adress" required class="input" [(ngModel)]="email"/>
+              </div>            
+              <div>
+                <input type="password" placeholder="Password" required  maxlength="8" class="input"  [(ngModel)]="password"/>
+              </div>
+              <div class="btn-div">
+                <button type="submit">LogIn</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <p>If you don't have an account? <strong routerLink="\signUp" >SignUp</strong></p>
+          </div>
+        </div>
+      </div>
+      </body>

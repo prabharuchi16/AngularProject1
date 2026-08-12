@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<h1>{{name.value}}</h1>
+
+<button [disabled] = "isDisable">Submit</button>
+
+<p [class.para]="isActive">Employees</p>
+
+<!-- attribute directive -->
+<p [ngClass] = "{para2: isActive}" [ngStyle] = "{color: color}" >Employees</p>
+
+<!-- property binding -->
+<input type="text" #name [value]="value" placeholder="Enter name"><br>
+
+<!-- //event binding -->
+<button (click) = "show(name.value)">Click here</button> <br>
+
+<input type="text" name="" id="" (keyup) = "press($event)" > <br>
+
+<input type="text" [value]="username", (input)= "username =$any($event.target).value " > 
+
+<p>{{username}}</p>
+
+<h1 *ngIf = 'isActive'>{{Empname| uppercase | slice:0:5}}</h1> 
+
+
+<ul>
+    <li *ngFor = "let employ of employees">
+      {{employ}}
+    </li>
+</ul>
+
+<div [ngSwitch] = "role">
+ <p *ngSwitchCase = "'admin'">Welcome Admin</p>
+ <p *ngSwitchCase = "'user'">Welcome User</p>
+ <p *ngSwitchDefault> Unknown Role</p>
+</div>
+
+<p appHighlight="red"  >highlight1</p>
+
+
+<p appHighlight="yellow">highlight2</p>
+
+<!-- pipes -->
+<p>Date: {{today | date:'dd-MM-yyyy'}}</p>
+<p>FullDate: {{today | date:'fullDate'}}</p>
+
+<p>Salary{{salary | currency}}</p>
+<p>{{salary | currency: 'INR' : 'symbol': '1.0-0'}}</p>
+
+
+<p>Salary with bonus: {{salary | bonus | currency: 'INR' : 'symbol': '1.0-0'}}</p>
+
+
+<p>{{price | number: '1.2-2'}}</p>
+
+<p>{{quantity | percent}}</p>
+
+<p>{{employ | json}}</p>
+
+<p>Phone Number {{phoneNumber | numberMask}}</p>
+
+<p>Meesage from home component: {{mesg}}</p>
+

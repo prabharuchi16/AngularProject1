@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<h1 >Home Component</h1>
+<p>Send message to employ-form</p>
+<button (click) = "send()">Send</button>
+<p>Get msg From Employ detail component</p>
+<button (click) = "getEmployee()" >Click</button>
+
+<p>Message from child: {{msg}}</p>
+
+<p>Message from child: {{message}}</p>
+<p>Employ Id from child: {{Id}}</p>
+
+
+<div *ngFor = "let emp of employees">
+<p>Name: {{emp.name}}</p>
+<p>Email: {{emp.email}}</p>
+</div>
+
+<button (click) = "changeChild()">Change Child heading</button>
+<app-emp-detail   [name] = "empName"  [employ] = "EmpData"  (messageEvent) = "recievedMsg($event)"     (idEvent) = "recievedEmpId($event)">
+<h2>Employee Details</h2>
+<p>Employee Name {{empName}}</p>
+</app-emp-detail>
+
+

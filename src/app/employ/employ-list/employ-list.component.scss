@@ -1,0 +1,134 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  background-color: white;
+  color: black;
+
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  // Column widths
+  .id-col {
+    width: 5%;
+  }
+
+  .name-col {
+    width: 13%;
+  }
+
+  .email-col {
+    width: 18%;
+  }
+
+  .department-col {
+    width: 12%;
+  }
+
+  .salary-col {
+    width: 12%;
+  }
+
+  .experience-col {
+    width: 10%;
+  }
+
+  .active-col {
+    width: 8%;
+  }
+
+  .actions-col {
+    width: 22%;
+  }
+
+  // Header
+  thead {
+    background-color: orangered;
+    color: white;
+
+    th {
+      padding: 14px 10px;
+
+      text-align: center;
+      vertical-align: middle;
+
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      border-right: 1px solid white;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  // Body
+  tbody {
+    tr {
+      background-color: white;
+
+      &:nth-child(even) {
+        background-color: #f5f5f5;
+      }
+
+    //   &:hover {
+    //     background-color: orangered;
+    //     color: white;
+
+    //     transition: 0.2s ease;
+    //   }
+    }
+
+    td {
+      padding: 12px 10px;
+
+      text-align: center;
+      vertical-align: middle;
+
+      border-bottom: 1px solid #f5f5f5;
+
+      font-size: 14px;
+
+      // Prevent long email from breaking table
+      &:nth-child(3) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // Action buttons
+  .actions {
+    white-space: nowrap;
+
+    button {
+      padding: 7px 12px;
+      margin: 2px;
+
+      border: 1px solid black;
+      border-radius: 5px;
+
+      background-color: black;
+      color: white;
+
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: white;
+        color: orangered;
+        border-color: orangered;
+      }
+    }
+  }
+}

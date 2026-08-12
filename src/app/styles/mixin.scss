@@ -1,0 +1,27 @@
+@mixin bgAndtext {
+  background-color: orangered;
+  color: white;
+}
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin input {
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 40px;
+  border: none;
+}
+
+body{
+  @include flex-center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+

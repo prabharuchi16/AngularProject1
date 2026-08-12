@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<table>
+  <colgroup>
+    <col class="id-col">
+    <col class="name-col">
+    <col class="email-col">
+    <col class="department-col">
+    <col class="salary-col">
+    <col class="experience-col">
+    <col class="active-col">
+    <col class="actions-col">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Department</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th>Active</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let employ of employees">
+      <td>{{ employ.id }}</td>
+
+      <td>
+        {{ employ.name | uppercase | firstName }}
+      </td>
+
+      <td>{{ employ.email }}</td>
+
+      <td>{{ employ.department }}</td>
+
+      <td>{{ employ.salary | currency:'INR' }}</td>
+
+      <td>{{ employ.experience }}</td>
+
+      <td>{{ employ.isActive }}</td>
+
+      <td class="actions">
+        <button>Edit</button>
+        
+        <!-- <button [routerLink] = "['/view-employe',employ.id]" [queryParams] = "{name: employ.name, department: employ.department, email: employ.email}">View</button> -->
+        <button (click) = "viewEmploy(employ)">View</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>Send Employe to home</p>
+<button (click) = "send()">Send Employ</button>

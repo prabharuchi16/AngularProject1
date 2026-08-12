@@ -1,0 +1,31 @@
+
+
+<h2 #childHeading>emp-detail component!</h2>
+<h4>
+{{name}}
+</h4>
+<p>Employ Details</p>
+<p>{{employ.name}}</p>
+<p>{{employ.email}}</p>
+
+<p>Send message to parent home</p>
+<button (click) = "sendMessage()">SendMsg</button>
+
+<p>this is the parent content from home</p>
+<ng-content></ng-content>
+
+
+<p>send id to parent home</p>
+
+<button (click) = "sendEmpId()">SendId</button>
+<!-- 
+<p>Employee Id: {{employeeId}}</p> -->
+
+<!-- <button (click) = "changeParent()">Change Parent heading</button> -->
+
+
+
+
+
+
+

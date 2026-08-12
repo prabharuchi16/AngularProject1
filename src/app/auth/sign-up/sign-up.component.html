@@ -1,0 +1,48 @@
+<body>
+<section>
+      <div class="left-div">
+        <div>
+          <h1>Register here...</h1>
+          <h3>Welcome</h3>
+          <h4>Please complete the registration form to create your account.</h4>
+        </div>
+      </div>
+
+      <div class="right-div">
+        <div class="inner-right">
+          <h1>Create Account</h1>
+          <div>
+            <form action="submit" (ngSubmit)="register()">
+              <div>
+                <input type="text" required placeholder="Full Name" class="input"  [(ngModel)] = "fullName"  />
+              </div>
+              <div>
+                <input type="email" placeholder="Email Adress" required class="input" [(ngModel)] = "email" />
+              </div>
+             
+              <div>
+                <input type="password" placeholder="Password" required  maxlength="8" class="input" [(ngModel)] = "password" />
+              </div>
+
+
+                <div>
+                  <select name="qualification" id="qualification" class="input" [(ngModel)] = "role" >
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                       
+                    </select>
+                 </div>
+
+              <div class="btn-div">
+                <button type="submit">Create Account</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <p>Already have an account? <a href="" routerLink = "/logIn">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </body>
