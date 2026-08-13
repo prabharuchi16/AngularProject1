@@ -5,13 +5,12 @@ import { BehaviorSubject } from "rxjs";
     providedIn: 'root'
 })
 
-export class EmployListService{
+export class EmployListService {
     private empSubject = new BehaviorSubject<object>({});
 
     message$ = this.empSubject.asObservable();
 
-    sendEmploy(employ: object) {
-        
+    sendEmploy(employ: object) {        
         this.empSubject.next(employ);
     }
 }

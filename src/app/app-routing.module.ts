@@ -5,8 +5,9 @@ import { EmployListComponent } from './employ/employ-list/employ-list.component'
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './employ/home/home.component';
-import { EmpDetailComponent } from './employ/emp-detail/emp-detail.component';
+import { EmpDetailComponent } from './employ/home/emp-detail/emp-detail.component';
 import { ViewEmployComponent } from './employ/view-employ/view-employ.component';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 
 
@@ -33,6 +34,9 @@ const routes: Routes = [
   // },
    {
     path: 'view-employe', component: ViewEmployComponent
+  },
+  {
+    path: 'user-detail', component: UserDetailComponent
   }
 ];
 @NgModule({

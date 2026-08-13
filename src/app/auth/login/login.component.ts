@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
+import { AuthService } from 'src/app/Service/AuthService';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent  {
 email = '';
 password = '';
-constructor(private router: Router){}
+constructor(private router: Router, private authService: AuthService){}
+
+// ngOnInit(): void {
+//   this.authService.sendMsg("token generated");
+// }
 
 logIn() {
 console.log('login function called');
@@ -22,6 +27,7 @@ console.log('login function called');
     email: this.email,
   password:  this.password
   }); 
+  this.authService.sendMsg("token generated");
   alert('login successfull')
 
   this.router.navigate(['/employe-list'])

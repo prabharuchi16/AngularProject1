@@ -1,5 +1,4 @@
 import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-emp-detail',
@@ -7,6 +6,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./emp-detail.component.scss']
 })
 export class EmpDetailComponent implements OnChanges{
+
+  // constructor(private authService: AuthService){}
+
+  // ngOnInit(): void {
+  //   this.authService.messager$.subscribe(msg=> console.log(msg)
+  //   )
+  // }
 
   
 @Input() name = '';
@@ -23,7 +29,7 @@ if(changes['employ']) {
 
  @Output() 
  messageEvent  = new EventEmitter<string>();
- sendMessage(){
+ sendMessage() {
   this.messageEvent.emit("Hello Parent from child employ-details");
  }
 

@@ -9,8 +9,8 @@ import { CustomName } from './pipes/CustomName';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { EmpDetailComponent } from './emp-detail/emp-detail.component';
-import { MessageService } from './Service/MessageService';
+import { EmpDetailComponent } from './home/emp-detail/emp-detail.component';
+import { MessageService } from '../Service/MessageService';
 import { ViewEmployComponent } from './view-employ/view-employ.component';
 
 @NgModule({
@@ -27,6 +27,11 @@ import { ViewEmployComponent } from './view-employ/view-employ.component';
           ViewEmployComponent,
        
   ],
+
+  providers:[
+MessageService,
+  ],
+
   imports: [
     CommonModule,
     RouterModule

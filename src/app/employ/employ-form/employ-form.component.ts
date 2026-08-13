@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MessageService } from '../Service/MessageService';
+import { MessageService } from '../../Service/MessageService';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -19,10 +19,9 @@ constructor(private messageService: MessageService){}
   console.log(value);
  }
 
- showMsg(){
-  console.log("show message from service",this.messageService.getMesasge());
-  
- }
+//  showMsg(){
+//   console.log("show message from service",this.messageService.getMesasge());
+//  }
 
 
 press(event: KeyboardEvent) {

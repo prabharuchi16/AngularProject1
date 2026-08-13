@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { EmployListService } from '../Service/EmployListService';
+import { Component, OnInit } from '@angular/core';
+import { EmployListService } from '../../Service/EmployListService';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Service/AuthService';
 
 @Component({
   selector: 'app-employ-list',
   templateUrl: './employ-list.component.html',
   styleUrls: ['./employ-list.component.scss']
 })
-export class EmployListComponent {
+export class EmployListComponent implements OnInit {
 employees = [
   {
     id: 1,
@@ -211,7 +212,11 @@ employees = [
   }
 ];
 
-constructor (private employService: EmployListService, private router: Router){ }
+constructor (private employService: EmployListService, private router: Router, private authService: AuthService){ }
+
+ngOnInit(): void {
+  this.authService.messager$.subscribe(msg=> console.log("Message recieved: ",msg))
+}
 
 send(){
   this.employService.sendEmploy(this.employees);

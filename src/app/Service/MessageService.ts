@@ -14,9 +14,9 @@ export class MessageService{
         this.messageSubject.next(message);
     }
 
-    getMesasge() {
-        return this.messageSubject;
-    }
+    // getMesasge() {
+    //     return this.messageSubject;
+    // }
 
 
 }
