@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Subject } from "rxjs";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -10,7 +10,8 @@ export class EmployListService{
 
     message$ = this.empSubject.asObservable();
 
-    sendEmploy(employ: object){
+    sendEmploy(employ: object) {
+        
         this.empSubject.next(employ);
     }
 }

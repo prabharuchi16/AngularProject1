@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MessageService } from '../Service/MessageServive';
+import { MessageService } from '../Service/MessageService';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -18,6 +18,12 @@ constructor(private messageService: MessageService){}
  show(value:string){
   console.log(value);
  }
+
+ showMsg(){
+  console.log("show message from service",this.messageService.getMesasge());
+  
+ }
+
 
 press(event: KeyboardEvent) {
 console.log(event.key);
@@ -45,9 +51,10 @@ ngOnInit(): void {
   this.employees =[
     "Ruchi","Yashi", 'Riya'
   ]
-
+  
  this.subscription = this.messageService.message$.subscribe(msg=> {this.mesg = msg });
 }
+
 ngOnDestroy(): void {
   this.subscription.unsubscribe();
 }

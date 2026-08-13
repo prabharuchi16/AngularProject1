@@ -1,16 +1,65 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 
-<p>view-employ works!</p>
+<!-- <p>view-employ works!</p>
 
 <p>Employ Id: {{employeeId}}</p>
 <p>Employ Name: {{empName}}</p>
 <p>Employ Department: {{department}}</p>
-<p>Email: {{email}}</p>
+<p>Email: {{email}}</p> -->
 
-<h3>Employ Details</h3>
+<!-- <h3>Employ Details</h3>
 <p>ID: {{employee.id}}</p>
 <p>Name: {{employee.name}}</p>
 <p>Email: {{employee.email}}</p>
 <p>Department: {{employee.department}}</p>
 <p>Salary: {{employee.salary}}</p>
-<p>Experience: {{employee.experience}}</p>
+<p>Experience: {{employee.experience}}</p> -->
+
+<div class="employee-card">
+
+  <div class="card-header">
+    <h3>Employee Details</h3>
+  </div>
+
+  <div class="card-body">
+
+    <div class="detail-row">
+      <span class="label">ID</span>
+      <span class="value">{{ employee.id }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Name</span>
+      <span class="value">{{ employee.name }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Email</span>
+      <span class="value">{{ employee.email }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Department</span>
+      <span class="value">{{ employee.department }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Salary</span>
+      <span class="value">
+        {{ employee.salary | currency:'INR' }}
+      </span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Experience</span>
+      <span class="value">{{ employee.experience }} years</span>
+    </div>
+
+  </div>
+
+  <div class="card-footer">
+    <button class="back-btn" routerLink="/employe-list">Back</button>
+    <!-- <button class="edit-btn">Edit</button> -->
+  </div>
+
+</div>

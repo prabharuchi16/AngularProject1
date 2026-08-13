@@ -115,9 +115,11 @@ table {
       border: 1px solid black;
       border-radius: 5px;
 
-      background-color: black;
-      color: white;
-
+      // background-color: black;
+      // color: white;
+ background-color: white;
+        color: orangered;
+        border-color: orangered;
       cursor: pointer;
       font-size: 12px;
       font-weight: 600;
@@ -125,9 +127,9 @@ table {
       transition: all 0.2s ease;
 
       &:hover {
-        background-color: white;
-        color: orangered;
-        border-color: orangered;
+        background-color: orangered;
+      color: white;
+        // border-color: orangered;
       }
     }
   }

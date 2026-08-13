@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Subject } from "rxjs";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +13,10 @@ export class MessageService{
     sendMessage(message: string) {
         this.messageSubject.next(message);
     }
-    
+
+    getMesasge() {
+        return this.messageSubject;
+    }
 
 
 }

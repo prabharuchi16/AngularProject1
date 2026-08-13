@@ -211,12 +211,11 @@ employees = [
   }
 ];
 
-constructor (private employService: EmployListService, private router: Router){}
+constructor (private employService: EmployListService, private router: Router){ }
 
 send(){
   this.employService.sendEmploy(this.employees);
 }
-
 viewEmploy(employ: any) {
   this.router.navigate(['/view-employe'], {
     state: {

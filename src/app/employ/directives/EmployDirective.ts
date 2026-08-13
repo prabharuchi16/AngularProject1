@@ -13,7 +13,7 @@ export class EmployDirective {
   onMouseEnter() {
     console.log("on mouse enter ",this.color);
     
-    this.element.nativeElement.style.color = "yellow";
+    this.element.nativeElement.style.color = this.color;
   }
 
   @HostListener('mouseleave')

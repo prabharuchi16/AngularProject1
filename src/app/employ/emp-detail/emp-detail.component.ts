@@ -29,7 +29,7 @@ if(changes['employ']) {
 
  @Output()
  idEvent = new EventEmitter<number>();
- sendEmpId(){
+ sendEmpId() {
   this.idEvent.emit(10);
  }
 

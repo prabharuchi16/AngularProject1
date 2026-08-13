@@ -15,6 +15,10 @@ role =''
 
 constructor(private router: Router){}
 register(){
+  if(this.fullName || this.email || this.password || this.role){
+    alert("Please Signup first")
+    return;
+  }
   console.log({
    fullName : this.fullName,
    email: this.email,

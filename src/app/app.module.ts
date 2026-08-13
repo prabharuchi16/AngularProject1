@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployModule } from './employ/employ.module';
 import { AuthModule } from './auth/auth.module';
+import { MessageService } from './employ/Service/MessageService';
 
 
 
@@ -22,7 +23,7 @@ import { AuthModule } from './auth/auth.module';
   exports:[
 
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

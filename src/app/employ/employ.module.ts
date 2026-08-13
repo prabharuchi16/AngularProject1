@@ -10,7 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EmpDetailComponent } from './emp-detail/emp-detail.component';
-import { MessageService } from './Service/MessageServive';
+import { MessageService } from './Service/MessageService';
 import { ViewEmployComponent } from './view-employ/view-employ.component';
 
 @NgModule({

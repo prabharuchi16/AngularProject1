@@ -14,19 +14,19 @@
           <div>
             <form action="submit" (ngSubmit)="register()">
               <div>
-                <input type="text" required placeholder="Full Name" class="input"  [(ngModel)] = "fullName"  />
+                <input type="text" required placeholder="Full Name" class="input" name="fullName"  [(ngModel)] = "fullName"  />
               </div>
               <div>
-                <input type="email" placeholder="Email Adress" required class="input" [(ngModel)] = "email" />
+                <input type="email" placeholder="Email Adress" required class="input" name="email" [(ngModel)] = "email" />
               </div>
              
               <div>
-                <input type="password" placeholder="Password" required  maxlength="8" class="input" [(ngModel)] = "password" />
+                <input type="password" placeholder="Password" required  maxlength="8" class="input" name="password" [(ngModel)] = "password" />
               </div>
 
 
                 <div>
-                  <select name="qualification" id="qualification" class="input" [(ngModel)] = "role" >
+                  <select name="qualification" id="qualification" class="input" name="role" [(ngModel)] = "role" >
                         <option value="">Select Role</option>
                         <option value="admin">Admin</option>
                         <option value="user">User</option>

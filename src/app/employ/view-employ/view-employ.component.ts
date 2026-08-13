@@ -16,7 +16,9 @@ export class ViewEmployComponent {
   employee:any
     constructor (private route: ActivatedRoute, private router: Router){
   
-      this.employee = history.state.employ;
+      // this.employee = history.state.employ;
+      this.employee = this.router.getCurrentNavigation()?.extras.state?.['employ'];
+
   
       // this.employeeId = Number( this.route.snapshot.paramMap.get('id'));
 
