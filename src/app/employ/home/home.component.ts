@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { EmployListService } from '../../Service/EmployListService';
 import { MessageService } from '../../Service/MessageService';
-import { EmpDetailComponent } from './emp-detail/emp-detail.component';
+import { EmpDetailComponent } from '../emp-detail/emp-detail.component';
 
 @Component({
   selector: 'app-home',

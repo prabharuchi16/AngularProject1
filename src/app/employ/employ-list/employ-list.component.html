@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <table>
   <colgroup>
     <col class="id-col">
@@ -43,9 +43,9 @@
       <td>{{ employ.isActive }}</td>
 
       <td class="actions">
-        <button>Edit</button>
+        <button (click) = "UpdateEmploy(employ)">Edit</button>
         
-        <!-- <button [routerLink] = "['/view-employe',employ.id]" [queryParams] = "{name: employ.name, department: employ.department, email: employ.email}">View</button> -->
+        <!-- <button [routerLink] = "['/view-employe',employ.id]"  [queryParams] = "{name: employ.name, department: employ.department, email: employ.email}">View</button> -->
         <button (click) = "viewEmploy(employ)">View</button>
         <button>Delete</button>
       </td>

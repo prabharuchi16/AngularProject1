@@ -30,7 +30,7 @@ console.log('login function called');
   this.authService.sendMsg("token generated");
   alert('login successfull')
 
-  this.router.navigate(['/employe-list'])
+  this.router.navigate(['/dashboard'])
   // .then(result=>{
   //   console.log("Navigation result: ", result);
     

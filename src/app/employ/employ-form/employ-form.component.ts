@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MessageService } from '../../Service/MessageService';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-employ-form',
@@ -8,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./employ-form.component.scss']
 })
 export class EmployFormComponent implements OnInit, OnDestroy {
-constructor(private messageService: MessageService){}
+constructor(private messageService: MessageService, private router: Router, private route: ActivatedRoute){}
 
  name = 'Employ-Form';
  isDisable = true;
@@ -64,4 +65,17 @@ salary = 50000.76654;
 price = 34000.6756;
 quantity = 0.5;
 phoneNumber = '57468574672';
+
+
+
+update(){
+  this.router.navigate(['../'], {
+    relativeTo: this.route
+  })
+  console.log("employ Updated")
+  
 }
+}
+
+
+

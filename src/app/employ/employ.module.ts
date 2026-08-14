@@ -9,9 +9,12 @@ import { CustomName } from './pipes/CustomName';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { EmpDetailComponent } from './home/emp-detail/emp-detail.component';
+import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 import { MessageService } from '../Service/MessageService';
 import { ViewEmployComponent } from './view-employ/view-employ.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { AddEmployComponent } from './add-employ/add-employ.component';
+import { EmployRoutingModule } from './employ-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { ViewEmployComponent } from './view-employ/view-employ.component';
        HomeComponent,
           EmpDetailComponent,
           ViewEmployComponent,
+          EmployeesComponent,
+          AddEmployComponent,
        
   ],
 
@@ -34,7 +39,8 @@ MessageService,
 
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    EmployRoutingModule
   ],
   exports:[
     EmployListComponent,

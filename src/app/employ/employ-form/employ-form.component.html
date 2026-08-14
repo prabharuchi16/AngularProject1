@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+
 <h1>{{name.value}}</h1>
 
 <button [disabled] = "isDisable">Submit</button>
@@ -62,4 +62,8 @@
 <p>Meesage from home component: {{mesg}}</p>
 
 <!-- <button (click) = "showMsg()">show Mesg</button> -->
+
+
+<button  (click)="update()">Update</button>
+<button routerLink="../">Back</button>
 
