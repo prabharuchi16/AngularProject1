@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployListService } from '../../Service/EmployListService';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/Service/AuthService';
 
 @Component({
@@ -212,7 +212,7 @@ employees = [
   }
 ];
 
-constructor (private employService: EmployListService, private router: Router, private authService: AuthService){ }
+constructor (private employService: EmployListService, private router: Router, private route: ActivatedRoute, private authService: AuthService){ }
 
 ngOnInit(): void {
   this.authService.messager$.subscribe(msg=> console.log("Message recieved: ",msg))
@@ -222,10 +222,16 @@ send(){
   this.employService.sendEmploy(this.employees);
 }
 viewEmploy(employ: any) {
-  this.router.navigate(['/view-employe'], {
+  this.router.navigate(['view'],  {
+    relativeTo: this.route,
     state: {
       employ:employ
     }
+  })
+}
+UpdateEmploy(employ:any){
+  this.router.navigate(['edit'], {
+    relativeTo: this.route
   })
 }
 
