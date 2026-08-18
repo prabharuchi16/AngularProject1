@@ -16,7 +16,7 @@ constructor(private router: Router, private authService: AuthService){}
 //   this.authService.sendMsg("token generated");
 // }
 
-logIn() {
+logIn(){
 console.log('login function called');
 
   if(!this.email || !this.password){
@@ -27,7 +27,7 @@ console.log('login function called');
     email: this.email,
   password:  this.password
   }); 
-  this.authService.sendMsg("token generated");
+  this.authService.login();
   alert('login successfull')
 
   this.router.navigate(['/dashboard'])

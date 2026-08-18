@@ -10,6 +10,7 @@ import { ViewEmployComponent } from './employ/view-employ/view-employ.component'
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddEmployComponent } from './employ/add-employ/add-employ.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 
@@ -47,7 +48,9 @@ const routes: Routes = [
   //   path: 'user-detail', component: UserDetailComponent
   // },
   {
-    path: 'dashboard', loadChildren: ()=> import('./dashboard/dashboard.module').then(m=> m.DashboardModule)
+    path: 'dashboard',
+    canActivate: [AuthGuard],
+     loadChildren: ()=> import('./dashboard/dashboard.module').then(m=> m.DashboardModule)
   },
 
   {
